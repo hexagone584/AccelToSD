@@ -4,7 +4,7 @@
 File myFile;
 Adafruit_MPU6050 mpu;
 String fileName = "Jackie.txt";
-
+//guh
 void setup() {
   Serial.begin(9600);  //sets up the baud(?) rate to 9600
 
