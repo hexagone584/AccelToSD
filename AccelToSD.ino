@@ -1,3 +1,9 @@
+/*
+AccelToSD.ino
+By: Jackie Yang
+A simple code to send accelerometer data to an SD reader
+*/
+
 #include <SD.h>
 #include <Adafruit_MPU6050.h>
 
@@ -49,6 +55,4 @@ void loop() {
   myFile.close();
   Serial.println("printing!");
   delay(500);
-
-  //I did something wacky
 }
