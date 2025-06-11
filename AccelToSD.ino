@@ -49,4 +49,6 @@ void loop() {
   myFile.close();
   Serial.println("printing!");
   delay(500);
+
+  //I did something wacky
 }
