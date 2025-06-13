@@ -15,16 +15,17 @@ void setup() {
   Serial.begin(9600);  //sets up the baud(?) rate to 9600
 
   //checks if everything seems right
-  while (!Serial);
-  if (!SD.begin()) {
-    Serial.println("Something about SD isn't right");
-    while (true);
-  }
+  while (!Serial) ;
+  
   if (!mpu.begin()) {
     Serial.println("Something about Accelerometer isn't right");
     while (true);
   }
 
+  if (!SD.begin()) {
+    Serial.println("Something about SD isn't right");
+    while (true);
+  }
   //writes the header
   myFile = SD.open(fileName, FILE_WRITE);
   myFile.print("Acceleration (m/s^2):\tX\tY\tZ\t Gyro (rad/s):\tX\tY\tZ\tTemp (degC):\n");
